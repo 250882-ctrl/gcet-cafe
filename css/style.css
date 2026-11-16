@@ -462,8 +462,9 @@ html[lang="ar"] .eyebrow {
 
 .status-pill {
   margin-top: 20px;
-  height: 40px;
-  padding: 0 16px;
+  height: auto;
+  min-height: 40px;
+  padding: 8px 16px;
   border-radius: 20px;
   font-size: 15px;
 }
@@ -1033,7 +1034,7 @@ html[lang="ar"] .field label {
    ========================================================= */
 @media (min-width: 900px) {
   :root {
-    --page-gutter: 80px;
+    --page-gutter: clamp(24px, 5.5vw, 80px);
     --header-h: 96px;
   }
   body {
@@ -1047,7 +1048,7 @@ html[lang="ar"] .field label {
     display: block;
   }
   .lang-btn {
-    margin-inline-start: 72px;
+    margin-inline-start: clamp(8px, 4vw, 72px);
   }
   .brand img {
     width: 60px;
@@ -1073,29 +1074,27 @@ html[lang="ar"] .field label {
 
   /* Home */
   .home-top {
-    grid-template-columns: 1fr 600px;
-    gap: 40px;
-    align-items: start;
+    gap: 32px;
   }
   .hero {
     padding-top: 4px;
   }
   .hero h1 {
-    font-size: 56px;
+    font-size: clamp(40px, 4.2vw, 56px);
   }
   .feature-card {
     min-height: 320px;
-    padding: 40px 10px 40px 40px;
+    padding: 40px 24px 40px 40px;
   }
   html[dir="rtl"] .feature-card {
-    padding: 40px 40px 40px 10px;
+    padding: 40px 40px 40px 24px;
   }
   .feature-card h2 {
-    font-size: 40px;
+    font-size: clamp(32px, 3vw, 40px);
   }
   .feature-photo {
-    width: 240px;
-    height: 240px;
+    width: clamp(180px, 18vw, 240px);
+    height: clamp(180px, 18vw, 240px);
     padding: 20px;
   }
   .favourites {
@@ -1105,7 +1104,7 @@ html[lang="ar"] .field label {
     font-size: 28px;
   }
   .fav-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
   .fav-card {
@@ -1126,6 +1125,11 @@ html[lang="ar"] .field label {
     font-size: 20px;
     margin-top: 4px;
   }
+  .fav-card h3,
+  .fav-card .desc,
+  .fav-card .price {
+    grid-column: 2;
+  }
   .fav-card .price {
     margin-top: 26px;
     font-size: 18px;
@@ -1145,11 +1149,6 @@ html[lang="ar"] .field label {
   }
 
   /* Menu */
-  .menu-bar {
-    grid-template-columns: auto 1fr;
-    gap: 76px;
-    align-items: center;
-  }
   .tabs {
     gap: 16px;
   }
@@ -1166,18 +1165,13 @@ html[lang="ar"] .field label {
     font-size: 18px;
   }
   .menu-columns {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 24px;
     align-items: start;
     margin-top: 40px;
   }
 
   /* About */
-  .about-top {
-    grid-template-columns: 540px 1fr;
-    gap: 80px;
-    align-items: start;
-  }
   .about-top .lead {
     font-size: 18px;
   }
@@ -1185,7 +1179,7 @@ html[lang="ar"] .field label {
     height: 330px;
   }
   .features {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 24px;
   }
   .about-photos {
@@ -1196,11 +1190,6 @@ html[lang="ar"] .field label {
   }
 
   /* Contact */
-  .contact-grid {
-    grid-template-columns: 600px 1fr;
-    gap: 80px;
-    align-items: start;
-  }
   .contact-info {
     gap: 20px;
   }
@@ -1213,6 +1202,33 @@ html[lang="ar"] .field label {
 
   .confirm-wrap {
     padding: 64px 0;
+  }
+}
+
+/* Wide screens: put the big blocks side by side */
+@media (min-width: 1180px) {
+  .fav-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .home-top {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    gap: 40px;
+    align-items: start;
+  }
+  .menu-bar {
+    grid-template-columns: auto 1fr;
+    gap: clamp(24px, 5vw, 76px);
+    align-items: center;
+  }
+  .about-top {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: clamp(32px, 5vw, 80px);
+    align-items: start;
+  }
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(32px, 5vw, 80px);
+    align-items: start;
   }
 }
 
