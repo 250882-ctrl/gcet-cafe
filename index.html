@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GCET Café – drinks and snacks for students and staff at the Global College of Engineering and Technology, Oman.">
+  <title>GCET Café · Home</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title="title.home">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="" width="42" height="42">
+        <span data-i18n="brand">GCET Café</span>
+      </a>
+      <nav class="top-nav" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.home">Home</a></li>
+          <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="lang-btn" type="button" data-i18n="lang.switch" data-i18n-attr="aria-label:lang.label" aria-label="Switch to Arabic">عربي</button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-overlay" data-i18n-attr="aria-label:nav.open" aria-label="Open navigation menu">
+        <span data-icon="burger" style="width:24px;height:24px;display:block"></span>
+      </button>
+    </div>
+    <p class="status-strip" id="status-strip" role="status">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="status-text">Open now · until 7:00 PM</span>
+    </p>
+  </header>
+
+  <!-- ===== Navigation menu (mobile) ===== -->
+  <div class="nav-overlay" id="nav-overlay">
+    <nav class="nav-panel" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
+      <div class="nav-panel-top">
+        <span class="nav-panel-title" data-i18n="nav.title">EXPLORE</span>
+        <button class="menu-btn close-btn" type="button" data-i18n-attr="aria-label:nav.close" aria-label="Close navigation menu" style="display:inline-flex">
+          <span data-icon="close" style="width:22px;height:22px;display:block"></span>
+        </button>
+      </div>
+      <ul>
+        <li><a href="index.html" aria-current="page"><strong data-i18n="nav.home">Home</strong><span data-i18n="nav.home.sub">Main page</span></a></li>
+        <li><a href="menu.html"><strong data-i18n="nav.menu">Menu</strong><span data-i18n="nav.menu.sub">Drinks and snacks</span></a></li>
+        <li><a href="about.html"><strong data-i18n="nav.about">About</strong><span data-i18n="nav.about.sub">About the café</span></a></li>
+        <li><a href="contact.html"><strong data-i18n="nav.contact">Contact</strong><span data-i18n="nav.contact.sub">Get in touch</span></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ===== Main content ===== -->
+  <main id="main" class="container">
+    <div class="home-grid">
+      <section class="hero">
+        <span class="badge" data-i18n="home.badge">ON CAMPUS</span>
+        <h1><span data-i18n="home.h1a">Welcome to</span> <span data-i18n="home.h1b">GCET Café.</span></h1>
+        <p class="subtitle" data-i18n="home.sub">Drinks and snacks for students and staff.</p>
+
+        <div class="feature-card">
+          <span class="eyebrow" data-i18n="home.feature.eyebrow">OUR FAVOURITE</span>
+          <h2><span data-i18n="home.feature.t1">Tea,</span> <span data-i18n="home.feature.t2">made fresh.</span></h2>
+          <p data-i18n="home.feature.copy">A hot cup for your break.</p>
+          <a class="btn btn-light" href="menu.html" data-i18n="home.feature.btn">VIEW MENU</a>
+          <span class="cup" data-icon="cup" style="color:var(--purple-700)" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <div>
+        <section class="section" aria-labelledby="fav-title">
+          <div class="section-head">
+            <h2 id="fav-title" data-i18n="home.fav.title">Our favourites</h2>
+            <a href="menu.html" data-i18n="home.fav.link">MENU →</a>
+          </div>
+          <div class="fav-grid">
+            <article class="card product-card">
+              <span class="product-icon" data-icon="cup"></span>
+              <h3 data-i18n="home.fav.tea">Tea</h3>
+              <p class="details" data-i18n="home.fav.tea.d">Hot spiced tea</p>
+              <span class="price" data-price="0.1">0.100 OMR</span>
+            </article>
+            <article class="card product-card">
+              <span class="product-icon" data-icon="bottle"></span>
+              <h3 data-i18n="home.fav.water">Water</h3>
+              <p class="details" data-i18n="home.fav.water.d">Bottled &amp; chilled</p>
+              <span class="price" data-price="0.1">0.100 OMR</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="note-banner">
+            <span class="product-icon" data-icon="info" style="background:var(--white);color:var(--olive-700);margin:0;flex-shrink:0"></span>
+            <div>
+              <h3 data-i18n="home.note.title">Need a snack?</h3>
+              <p data-i18n="home.note.copy">Ask at the counter about what’s available today.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="visit-title">
+      <h2 id="visit-title" data-i18n="home.visit">Visit us</h2>
+      <div class="info-list">
+        <a class="card info-card" href="contact.html">
+          <span class="product-icon" data-icon="pin"></span>
+          <div>
+            <h3 data-i18n="home.find">Find us</h3>
+            <p data-i18n="home.find.d">GCET Canteen · Campus</p>
+          </div>
+          <span class="arrow" data-icon="arrow" style="width:20px;height:20px;display:block"></span>
+        </a>
+        <a class="card info-card" href="contact.html">
+          <span class="product-icon" data-icon="clock"></span>
+          <div>
+            <h3 data-i18n="home.hours">Opening hours</h3>
+            <p data-i18n="home.hours.d">Sun – Thu · 7:30 AM – 7:00 PM / Fri &amp; Sat: closed</p>
+          </div>
+          <span class="arrow" data-icon="arrow" style="width:20px;height:20px;display:block"></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand"><img src="images/logo.png" alt="" width="36" height="36"><span data-i18n="brand">GCET Café</span></div>
+        <p data-i18n="footer.place">GCET Canteen · Global College of Engineering and Technology, Muscat</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <p data-i18n="footer.copy">© 2026 GCET Café · Student project</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Bottom navigation (mobile) ===== -->
+  <nav class="bottom-nav" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html" aria-current="page"><span data-icon="home"></span><span data-i18n="nav.home">Home</span></a></li>
+      <li><a href="menu.html"><span data-icon="menu"></span><span data-i18n="nav.menu">Menu</span></a></li>
+      <li><a href="about.html"><span data-icon="about"></span><span data-i18n="nav.about">About</span></a></li>
+      <li><a href="contact.html"><span data-icon="contact"></span><span data-i18n="nav.contact">Contact</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

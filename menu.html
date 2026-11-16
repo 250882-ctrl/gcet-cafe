@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GCET Café menu – hot drinks, cold drinks and snacks at simple prices.">
+  <title>GCET Café · Menu</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title="title.menu">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="" width="42" height="42">
+        <span data-i18n="brand">GCET Café</span>
+      </a>
+      <nav class="top-nav" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="menu.html" aria-current="page" data-i18n="nav.menu">Menu</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="lang-btn" type="button" data-i18n="lang.switch" data-i18n-attr="aria-label:lang.label" aria-label="Switch to Arabic">عربي</button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-overlay" data-i18n-attr="aria-label:nav.open" aria-label="Open navigation menu">
+        <span data-icon="burger" style="width:24px;height:24px;display:block"></span>
+      </button>
+    </div>
+    <p class="status-strip" id="status-strip" role="status">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="status-text">Open now · until 7:00 PM</span>
+    </p>
+  </header>
+
+  <!-- ===== Navigation menu (mobile) ===== -->
+  <div class="nav-overlay" id="nav-overlay">
+    <nav class="nav-panel" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
+      <div class="nav-panel-top">
+        <span class="nav-panel-title" data-i18n="nav.title">EXPLORE</span>
+        <button class="menu-btn close-btn" type="button" data-i18n-attr="aria-label:nav.close" aria-label="Close navigation menu" style="display:inline-flex">
+          <span data-icon="close" style="width:22px;height:22px;display:block"></span>
+        </button>
+      </div>
+      <ul>
+        <li><a href="index.html"><strong data-i18n="nav.home">Home</strong><span data-i18n="nav.home.sub">Main page</span></a></li>
+        <li><a href="menu.html" aria-current="page"><strong data-i18n="nav.menu">Menu</strong><span data-i18n="nav.menu.sub">Drinks and snacks</span></a></li>
+        <li><a href="about.html"><strong data-i18n="nav.about">About</strong><span data-i18n="nav.about.sub">About the café</span></a></li>
+        <li><a href="contact.html"><strong data-i18n="nav.contact">Contact</strong><span data-i18n="nav.contact.sub">Get in touch</span></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ===== Main content ===== -->
+  <main id="main" class="container">
+    <span class="eyebrow" data-i18n="menu.eyebrow">GCET CAFÉ MENU</span>
+    <h1 data-i18n="menu.title">Our menu</h1>
+    <p class="subtitle" data-i18n="menu.sub">Drinks and snacks at simple prices.</p>
+
+    <div class="tabs" role="group" data-i18n-attr="aria-label:menu.tabs" aria-label="Menu sections">
+      <button class="tab" type="button" data-target="all" aria-pressed="true" data-i18n="menu.tab.all">All</button>
+      <button class="tab" type="button" data-target="hot" aria-pressed="false" data-i18n="menu.tab.hot">Hot</button>
+      <button class="tab" type="button" data-target="cold" aria-pressed="false" data-i18n="menu.tab.cold">Cold</button>
+      <button class="tab" type="button" data-target="snacks" aria-pressed="false" data-i18n="menu.tab.snacks">Snacks</button>
+    </div>
+
+    <section class="offer-card" aria-labelledby="offer-title">
+      <span class="product-icon" data-icon="samosa" style="background:var(--white);margin:0;flex-shrink:0"></span>
+      <div>
+        <span class="eyebrow" data-i18n="menu.offer.label">TODAY’S OFFER</span>
+        <h2 id="offer-title" data-i18n="menu.offer.title">Tea + Samosa</h2>
+        <p data-i18n="menu.offer.copy">A hot tea and two crispy samosas.</p>
+      </div>
+      <span class="price" data-i18n="menu.offer.price">0.250 OMR</span>
+    </section>
+
+    <!-- Menu items are added by js/main.js from the MENU_ITEMS list -->
+    <div class="menu-columns">
+      <section class="section menu-section" id="hot" aria-labelledby="hot-title">
+        <h2 id="hot-title" data-i18n="menu.sec.hot">Hot drinks</h2>
+        <ul class="menu-list" id="list-hot"></ul>
+      </section>
+      <section class="section menu-section" id="cold" aria-labelledby="cold-title">
+        <h2 id="cold-title" data-i18n="menu.sec.cold">Cold drinks</h2>
+        <ul class="menu-list" id="list-cold"></ul>
+      </section>
+      <section class="section menu-section" id="snacks" aria-labelledby="snacks-title">
+        <h2 id="snacks-title" data-i18n="menu.sec.snacks">Snacks</h2>
+        <ul class="menu-list" id="list-snacks"></ul>
+      </section>
+    </div>
+
+    <p class="small-note" data-i18n="menu.note">Prices may change. Ask at the counter for today’s items.</p>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand"><img src="images/logo.png" alt="" width="36" height="36"><span data-i18n="brand">GCET Café</span></div>
+        <p data-i18n="footer.place">GCET Canteen · Global College of Engineering and Technology, Muscat</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <p data-i18n="footer.copy">© 2026 GCET Café · Student project</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Bottom navigation (mobile) ===== -->
+  <nav class="bottom-nav" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html"><span data-icon="home"></span><span data-i18n="nav.home">Home</span></a></li>
+      <li><a href="menu.html" aria-current="page"><span data-icon="menu"></span><span data-i18n="nav.menu">Menu</span></a></li>
+      <li><a href="about.html"><span data-icon="about"></span><span data-i18n="nav.about">About</span></a></li>
+      <li><a href="contact.html"><span data-icon="contact"></span><span data-i18n="nav.contact">Contact</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

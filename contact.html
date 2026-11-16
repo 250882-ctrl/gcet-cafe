@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact GCET Café – send your questions, complaints or suggestions.">
+  <title>GCET Café · Contact</title>
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title="title.contact">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="" width="42" height="42">
+        <span data-i18n="brand">GCET Café</span>
+      </a>
+      <nav class="top-nav" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="lang-btn" type="button" data-i18n="lang.switch" data-i18n-attr="aria-label:lang.label" aria-label="Switch to Arabic">عربي</button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-overlay" data-i18n-attr="aria-label:nav.open" aria-label="Open navigation menu">
+        <span data-icon="burger" style="width:24px;height:24px;display:block"></span>
+      </button>
+    </div>
+    <p class="status-strip" id="status-strip" role="status">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="status-text">Open now · until 7:00 PM</span>
+    </p>
+  </header>
+
+  <!-- ===== Navigation menu (mobile) ===== -->
+  <div class="nav-overlay" id="nav-overlay">
+    <nav class="nav-panel" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
+      <div class="nav-panel-top">
+        <span class="nav-panel-title" data-i18n="nav.title">EXPLORE</span>
+        <button class="menu-btn close-btn" type="button" data-i18n-attr="aria-label:nav.close" aria-label="Close navigation menu" style="display:inline-flex">
+          <span data-icon="close" style="width:22px;height:22px;display:block"></span>
+        </button>
+      </div>
+      <ul>
+        <li><a href="index.html"><strong data-i18n="nav.home">Home</strong><span data-i18n="nav.home.sub">Main page</span></a></li>
+        <li><a href="menu.html"><strong data-i18n="nav.menu">Menu</strong><span data-i18n="nav.menu.sub">Drinks and snacks</span></a></li>
+        <li><a href="about.html"><strong data-i18n="nav.about">About</strong><span data-i18n="nav.about.sub">About the café</span></a></li>
+        <li><a href="contact.html" aria-current="page"><strong data-i18n="nav.contact">Contact</strong><span data-i18n="nav.contact.sub">Get in touch</span></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ===== Main content ===== -->
+  <main id="main" class="container">
+    <span class="eyebrow" data-i18n="contact.eyebrow">CONTACT</span>
+    <h1 data-i18n="contact.title">Contact us</h1>
+    <p class="subtitle" data-i18n="contact.sub">Send us your questions, complaints or suggestions.</p>
+
+    <div class="contact-grid">
+      <div>
+        <a class="email-card section" href="mailto:250882@gcet.edu.om">
+          <span class="product-icon" data-icon="mail"></span>
+          <span>
+            <span class="eyebrow" data-i18n="contact.email.eyebrow">EMAIL THE CAFÉ</span>
+            <strong data-i18n="contact.email.prompt">Send us an email</strong>
+          </span>
+        </a>
+
+        <section class="section" aria-labelledby="follow-title">
+          <h2 id="follow-title" data-i18n="contact.follow">Follow us</h2>
+          <div class="social-grid">
+            <a class="card social-card" href="https://www.instagram.com/gcetoman/" target="_blank" rel="noopener">
+              <span class="product-icon" data-icon="instagram"></span>
+              <strong data-i18n="contact.ig">Instagram</strong>
+              <span>@gcetoman</span>
+              <span class="visually-hidden" data-i18n="contact.newtab">(opens in a new tab)</span>
+            </a>
+            <a class="card social-card" href="https://www.facebook.com/gcetoman/" target="_blank" rel="noopener">
+              <span class="product-icon" data-icon="facebook"></span>
+              <strong data-i18n="contact.fb">Facebook</strong>
+              <span>@gcetoman</span>
+              <span class="visually-hidden" data-i18n="contact.newtab">(opens in a new tab)</span>
+            </a>
+            <!-- TODO: link to https://wa.me/968XXXXXXXX once the café gives its number -->
+            <div class="card social-card">
+              <span class="product-icon" data-icon="whatsapp"></span>
+              <strong data-i18n="contact.wa">WhatsApp</strong>
+              <span data-i18n="contact.wa.d">Quick questions</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="section card" aria-labelledby="form-title">
+        <h2 id="form-title" data-i18n="form.title">Write to us</h2>
+        <p class="subtitle" data-i18n="form.sub">We’d like to hear from you.</p>
+
+        <form class="contact-form" id="contact-form" action="thank-you.html" method="get" novalidate>
+          <p class="small-note" style="margin:0" data-i18n="form.required">All fields are required.</p>
+          <div class="form-error-summary" id="form-error-summary" role="alert" data-i18n="form.err.summary">Please fix the fields marked in red.</div>
+
+          <div class="field">
+            <label for="name" data-i18n="form.name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+            <span class="error-msg" id="name-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="email" data-i18n="form.email">Your email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" dir="ltr">
+            <span class="error-msg" id="email-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="message" data-i18n="form.message">Message</label>
+            <textarea id="message" name="message" required aria-describedby="message-error"></textarea>
+            <span class="error-msg" id="message-error"></span>
+          </div>
+
+          <button class="btn btn-block" type="submit" data-i18n="form.submit">SEND EMAIL</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand"><img src="images/logo.png" alt="" width="36" height="36"><span data-i18n="brand">GCET Café</span></div>
+        <p data-i18n="footer.place">GCET Canteen · Global College of Engineering and Technology, Muscat</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <p data-i18n="footer.copy">© 2026 GCET Café · Student project</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Bottom navigation (mobile) ===== -->
+  <nav class="bottom-nav" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html"><span data-icon="home"></span><span data-i18n="nav.home">Home</span></a></li>
+      <li><a href="menu.html"><span data-icon="menu"></span><span data-i18n="nav.menu">Menu</span></a></li>
+      <li><a href="about.html"><span data-icon="about"></span><span data-i18n="nav.about">About</span></a></li>
+      <li><a href="contact.html" aria-current="page"><span data-icon="contact"></span><span data-i18n="nav.contact">Contact</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
