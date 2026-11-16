@@ -1,8 +1,8 @@
 /* =========================================================
    GCET Café — main script
    1. Text in English and Arabic (language switch)
-   2. Icons
-   3. Open / closed strip (follows Oman time)
+   2. Small icons (bottom navigation, menu button)
+   3. Open / closed pill (follows Oman time)
    4. Menu page (items, tabs)
    5. Navigation menu (open / close)
    6. Contact form check
@@ -12,7 +12,8 @@
 const TEXT = {
   en: {
     "skip": "Skip to main content",
-    "brand": "GCET Café",
+    "brand.name": "GCET CAFÉ",
+    "brand.tag": "CAMPUS CAFÉ",
     "lang.switch": "عربي",
     "lang.label": "Switch to Arabic",
     "nav.open": "Open navigation menu",
@@ -28,6 +29,8 @@ const TEXT = {
     "nav.about.sub": "About the café",
     "nav.contact.sub": "Get in touch",
     "currency": "OMR",
+    "footer.info": "GCET Café · Campus · Sun – Thu 7:30 AM – 7:00 PM",
+    "footer.copy": "© GCET Café 2026",
 
     /* Home */
     "title.home": "GCET Café · Home",
@@ -35,52 +38,52 @@ const TEXT = {
     "home.h1a": "Welcome to",
     "home.h1b": "GCET Café.",
     "home.sub": "Drinks and snacks for students and staff.",
+    "home.viewMenu": "VIEW MENU",
+    "home.findUs": "FIND US",
     "home.feature.eyebrow": "OUR FAVOURITE",
     "home.feature.t1": "Tea,",
     "home.feature.t2": "made fresh.",
     "home.feature.copy": "A hot cup for your break.",
-    "home.feature.btn": "VIEW MENU",
     "home.fav.title": "Our favourites",
-    "home.fav.link": "MENU →",
-    "home.fav.tea": "Tea",
-    "home.fav.tea.d": "Hot spiced tea",
-    "home.fav.water": "Water",
-    "home.fav.water.d": "Bottled & chilled",
-    "home.note.title": "Need a snack?",
-    "home.note.copy": "Ask at the counter about what’s available today.",
-    "home.visit": "Visit us",
-    "home.find": "Find us",
-    "home.find.d": "GCET Canteen · Campus",
-    "home.hours": "Opening hours",
-    "home.hours.d": "Sun – Thu · 7:30 AM – 7:00 PM / Fri & Sat: closed",
+    "home.fav.link": "MENU",
+    "fav.tea": "Tea",
+    "fav.tea.d": "Hot spiced tea",
+    "fav.coffee": "Coffee",
+    "fav.coffee.d": "Served with dates",
+    "fav.water": "Water",
+    "fav.water.d": "Bottled & chilled",
+    "fav.samosa": "Samosa",
+    "fav.samosa.d": "Two crispy pieces",
+    "home.visit": "VISIT US",
+    "info.find": "Find us",
+    "info.find.d": "GCET Canteen · Campus",
+    "info.hours": "Opening hours",
+    "info.hours.d1": "Sun – Thu · 7:30 AM – 7:00 PM",
+    "info.hours.d2": "Fri & Sat: closed",
+    "alt.tea": "A glass of hot spiced tea on a saucer",
+    "alt.counter": "A staff member working at the café counter",
 
     /* Menu */
     "title.menu": "GCET Café · Menu",
     "menu.eyebrow": "GCET CAFÉ MENU",
     "menu.title": "Our menu",
     "menu.sub": "Drinks and snacks at simple prices.",
-    "menu.tabs": "Menu sections",
-    "menu.tab.all": "All",
+    "menu.tabs": "Jump to a menu section",
     "menu.tab.hot": "Hot",
     "menu.tab.cold": "Cold",
     "menu.tab.snacks": "Snacks",
     "menu.offer.label": "TODAY’S OFFER",
-    "menu.offer.title": "Tea + Samosa",
-    "menu.offer.copy": "A hot tea and two crispy samosas.",
-    "menu.offer.price": "0.250 OMR",
-    "menu.sec.hot": "Hot drinks",
-    "menu.sec.cold": "Cold drinks",
-    "menu.sec.snacks": "Snacks",
-    "menu.note": "Prices may change. Ask at the counter for today’s items.",
+    "menu.offer.text": "Tea + Samosa — a hot tea and two crispy samosas",
+    "menu.sec.hot": "HOT DRINKS",
+    "menu.sec.cold": "COLD DRINKS",
+    "menu.sec.snacks": "SNACKS",
 
     /* About */
     "title.about": "GCET Café · About",
     "about.eyebrow": "ABOUT US",
-    "about.title": "A café for students and staff.",
-    "about.quote": "A place to take a short break.",
-    "about.attr": "GCET CAFÉ • CAMPUS LIFE",
-    "about.h2": "About the café",
-    "about.text": "GCET Café is a small café on campus where students and staff can get a drink or a snack between classes.",
+    "about.t1": "A café for students",
+    "about.t2": "and staff.",
+    "about.text": "GCET Café is a small café on campus where students and staff can take a short break between classes.",
     "about.hl1": "Drinks and snacks",
     "about.hl1.d": "Tea, coffee, water, juice and snacks.",
     "about.hl2": "Quick service",
@@ -89,15 +92,17 @@ const TEXT = {
     "about.hl3.d": "For all GCET students and staff.",
     "about.closing": "Come and visit us on campus.",
     "about.cta": "VIEW OUR MENU",
+    "alt.seating": "Tables and chairs in the café seating area",
+    "alt.ordering": "Students buying bottled water at the counter",
+    "alt.preparing": "A staff member handing over bottled water",
 
     /* Contact */
     "title.contact": "GCET Café · Contact",
     "contact.eyebrow": "CONTACT",
     "contact.title": "Contact us",
     "contact.sub": "Send us your questions, complaints or suggestions.",
-    "contact.email.eyebrow": "EMAIL THE CAFÉ",
-    "contact.email.prompt": "Send us an email",
-    "contact.follow": "Follow us",
+    "alt.campus": "A student walking along a GCET campus corridor",
+    "contact.social": "SOCIAL MEDIA",
     "contact.ig": "Instagram",
     "contact.fb": "Facebook",
     "contact.wa": "WhatsApp",
@@ -105,10 +110,13 @@ const TEXT = {
     "contact.newtab": "(opens in a new tab)",
     "form.title": "Write to us",
     "form.sub": "We’d like to hear from you.",
-    "form.required": "All fields are required.",
-    "form.name": "Your name",
-    "form.email": "Your email",
-    "form.message": "Message",
+    "form.emailLine": "Or email us:",
+    "form.name": "YOUR NAME",
+    "form.email": "YOUR EMAIL",
+    "form.message": "MESSAGE",
+    "form.name.ph": "Your name",
+    "form.email.ph": "Your email",
+    "form.message.ph": "Write your message",
     "form.submit": "SEND EMAIL",
     "form.err.summary": "Please fix the fields marked in red.",
     "form.err.name": "Please enter your name.",
@@ -119,16 +127,12 @@ const TEXT = {
 
     /* Message sent */
     "title.sent": "GCET Café · Message sent",
-    "sent.title": "Thank you!",
-    "sent.title.name": "Thank you, {name}!",
-    "sent.copy": "We received your message and will reply soon.",
+    "sent.title": "Message sent",
+    "sent.copy": "Thank you. We will reply to your email soon.",
+    "sent.copy.name": "Thank you, {name}. We will reply to your email soon.",
     "sent.btn": "BACK TO HOME",
 
-    /* Footer */
-    "footer.place": "GCET Canteen · Global College of Engineering and Technology, Muscat",
-    "footer.copy": "© 2026 GCET Café · Student project",
-
-    /* Status strip */
+    /* Open / closed */
     "status.open": "Open now · until 7:00 PM",
     "status.today": "Closed now · opens today 7:30 AM",
     "status.tomorrow": "Closed now · opens tomorrow 7:30 AM",
@@ -138,7 +142,8 @@ const TEXT = {
 
   ar: {
     "skip": "انتقل إلى المحتوى الرئيسي",
-    "brand": "كافيه GCET",
+    "brand.name": "كافيه GCET",
+    "brand.tag": "كافيه الكلية",
     "lang.switch": "EN",
     "lang.label": "التبديل إلى الإنجليزية",
     "nav.open": "فتح قائمة التنقل",
@@ -154,56 +159,58 @@ const TEXT = {
     "nav.about.sub": "عن الكافيه",
     "nav.contact.sub": "تواصل معنا",
     "currency": "ر.ع.",
+    "footer.info": "كافيه GCET · الحرم الجامعي · الأحد – الخميس 7:30 ص – 7:00 م",
+    "footer.copy": "© كافيه GCET 2026",
 
     "title.home": "كافيه GCET · الرئيسية",
     "home.badge": "داخل الكلية",
     "home.h1a": "أهلاً بك في",
     "home.h1b": "كافيه GCET.",
     "home.sub": "مشروبات ووجبات خفيفة للطلاب والموظفين.",
+    "home.viewMenu": "عرض القائمة",
+    "home.findUs": "موقعنا",
     "home.feature.eyebrow": "المفضّل لدينا",
     "home.feature.t1": "شاي،",
     "home.feature.t2": "يُحضَّر طازجاً.",
     "home.feature.copy": "كوب ساخن لاستراحتك.",
-    "home.feature.btn": "عرض القائمة",
     "home.fav.title": "مفضّلاتنا",
-    "home.fav.link": "القائمة ←",
-    "home.fav.tea": "شاي",
-    "home.fav.tea.d": "شاي ساخن بالتوابل",
-    "home.fav.water": "ماء",
-    "home.fav.water.d": "معبأ ومبرّد",
-    "home.note.title": "تحتاج وجبة خفيفة؟",
-    "home.note.copy": "اسأل عند الكاونتر عمّا هو متوفر اليوم.",
+    "home.fav.link": "القائمة",
+    "fav.tea": "شاي",
+    "fav.tea.d": "شاي ساخن بالتوابل",
+    "fav.coffee": "قهوة",
+    "fav.coffee.d": "تُقدَّم مع التمر",
+    "fav.water": "ماء",
+    "fav.water.d": "معبأ ومبرّد",
+    "fav.samosa": "سمبوسة",
+    "fav.samosa.d": "حبتان مقرمشتان",
     "home.visit": "زورونا",
-    "home.find": "موقعنا",
-    "home.find.d": "كانتين GCET · الحرم الجامعي",
-    "home.hours": "ساعات العمل",
-    "home.hours.d": "الأحد – الخميس · 7:30 ص – 7:00 م / الجمعة والسبت: مغلق",
+    "info.find": "موقعنا",
+    "info.find.d": "كانتين GCET · الحرم الجامعي",
+    "info.hours": "ساعات العمل",
+    "info.hours.d1": "الأحد – الخميس · 7:30 ص – 7:00 م",
+    "info.hours.d2": "الجمعة والسبت: مغلق",
+    "alt.tea": "كوب شاي ساخن بالتوابل على صحن",
+    "alt.counter": "موظف يعمل عند كاونتر الكافيه",
 
     "title.menu": "كافيه GCET · القائمة",
     "menu.eyebrow": "قائمة كافيه GCET",
     "menu.title": "قائمتنا",
     "menu.sub": "مشروبات ووجبات خفيفة بأسعار بسيطة.",
-    "menu.tabs": "أقسام القائمة",
-    "menu.tab.all": "الكل",
+    "menu.tabs": "انتقل إلى قسم من القائمة",
     "menu.tab.hot": "ساخن",
     "menu.tab.cold": "بارد",
     "menu.tab.snacks": "وجبات خفيفة",
     "menu.offer.label": "عرض اليوم",
-    "menu.offer.title": "شاي + سمبوسة",
-    "menu.offer.copy": "شاي ساخن مع حبتي سمبوسة مقرمشة.",
-    "menu.offer.price": "0.250 ر.ع.",
+    "menu.offer.text": "شاي + سمبوسة — شاي ساخن مع حبتي سمبوسة مقرمشة",
     "menu.sec.hot": "مشروبات ساخنة",
     "menu.sec.cold": "مشروبات باردة",
     "menu.sec.snacks": "وجبات خفيفة",
-    "menu.note": "قد تتغير الأسعار. اسأل عند الكاونتر عن أصناف اليوم.",
 
     "title.about": "كافيه GCET · من نحن",
     "about.eyebrow": "من نحن",
-    "about.title": "كافيه للطلاب والموظفين.",
-    "about.quote": "مكان لأخذ استراحة قصيرة.",
-    "about.attr": "كافيه GCET • حياة الكلية",
-    "about.h2": "عن الكافيه",
-    "about.text": "كافيه GCET مقهى صغير داخل الكلية، يحصل فيه الطلاب والموظفون على مشروب أو وجبة خفيفة بين المحاضرات.",
+    "about.t1": "كافيه للطلاب",
+    "about.t2": "والموظفين.",
+    "about.text": "كافيه GCET مقهى صغير داخل الكلية، يأخذ فيه الطلاب والموظفون استراحة قصيرة بين المحاضرات.",
     "about.hl1": "مشروبات ووجبات خفيفة",
     "about.hl1.d": "شاي وقهوة وماء وعصير ووجبات خفيفة.",
     "about.hl2": "خدمة سريعة",
@@ -212,14 +219,16 @@ const TEXT = {
     "about.hl3.d": "لكل طلاب وموظفي GCET.",
     "about.closing": "تفضّل بزيارتنا في الكلية.",
     "about.cta": "عرض القائمة",
+    "alt.seating": "طاولات وكراسي في جلسة الكافيه",
+    "alt.ordering": "طلاب يشترون مياه معبأة من الكاونتر",
+    "alt.preparing": "موظف يسلّم مياه معبأة",
 
     "title.contact": "كافيه GCET · تواصل",
     "contact.eyebrow": "تواصل معنا",
     "contact.title": "اتصل بنا",
     "contact.sub": "أرسل لنا أسئلتك أو شكاواك أو اقتراحاتك.",
-    "contact.email.eyebrow": "راسل الكافيه",
-    "contact.email.prompt": "أرسل لنا رسالة",
-    "contact.follow": "تابعنا",
+    "alt.campus": "طالب يمشي في ممر داخل الكلية",
+    "contact.social": "التواصل الاجتماعي",
     "contact.ig": "إنستغرام",
     "contact.fb": "فيسبوك",
     "contact.wa": "واتساب",
@@ -227,10 +236,13 @@ const TEXT = {
     "contact.newtab": "(يفتح في نافذة جديدة)",
     "form.title": "اكتب لنا",
     "form.sub": "يسعدنا سماع رأيك.",
-    "form.required": "جميع الحقول مطلوبة.",
+    "form.emailLine": "أو راسلنا على:",
     "form.name": "الاسم",
     "form.email": "البريد الإلكتروني",
     "form.message": "الرسالة",
+    "form.name.ph": "اسمك",
+    "form.email.ph": "بريدك الإلكتروني",
+    "form.message.ph": "اكتب رسالتك",
     "form.submit": "إرسال",
     "form.err.summary": "يرجى تصحيح الحقول المحددة باللون الأحمر.",
     "form.err.name": "يرجى كتابة اسمك.",
@@ -240,13 +252,10 @@ const TEXT = {
     "form.err.message.short": "رسالتك قصيرة جداً (10 أحرف على الأقل).",
 
     "title.sent": "كافيه GCET · تم الإرسال",
-    "sent.title": "شكراً لك!",
-    "sent.title.name": "شكراً لك يا {name}!",
-    "sent.copy": "وصلتنا رسالتك وسنرد عليك قريباً.",
+    "sent.title": "تم إرسال الرسالة",
+    "sent.copy": "شكراً لك. سنرد على بريدك قريباً.",
+    "sent.copy.name": "شكراً لك يا {name}. سنرد على بريدك قريباً.",
     "sent.btn": "العودة للرئيسية",
-
-    "footer.place": "كانتين GCET · الكلية العالمية للهندسة والتكنولوجيا، مسقط",
-    "footer.copy": "© 2026 كافيه GCET · مشروع طالب",
 
     "status.open": "مفتوح الآن · حتى الساعة 7:00 م",
     "status.today": "مغلق الآن · نفتح اليوم 7:30 ص",
@@ -258,75 +267,51 @@ const TEXT = {
 
 /* Menu items (prices in OMR — to be confirmed by the café) */
 const MENU_ITEMS = [
-  { section: "hot", icon: "cup", price: 0.1, badge: { en: "BEST SELLER", ar: "الأكثر طلباً" },
+  { section: "hot", img: "tea.png", price: 0.1,
     en: { name: "Tea", desc: "Classic spiced tea" },
     ar: { name: "شاي", desc: "شاي بالتوابل الكلاسيكي" } },
-  { section: "hot", icon: "coffee", price: 0.2,
+  { section: "hot", img: "coffee.png", price: 0.2,
     en: { name: "Coffee", desc: "Hot coffee, served with dates" },
     ar: { name: "قهوة", desc: "قهوة ساخنة تُقدَّم مع التمر" } },
-  { section: "cold", icon: "bottle", price: 0.1,
+  { section: "cold", img: "water.png", price: 0.1,
     en: { name: "Bottled water", desc: "Chilled bottled water" },
     ar: { name: "مياه معبأة", desc: "مياه معبأة مبرّدة" } },
-  { section: "cold", icon: "can", price: 0.25,
+  { section: "cold", img: "soft-drink.png", price: 0.25,
     en: { name: "Soft drink", desc: "Chilled can, assorted flavours" },
     ar: { name: "مشروب غازي", desc: "علبة باردة بنكهات متنوعة" } },
-  { section: "cold", icon: "juice", price: 0.3,
+  { section: "cold", img: "juice.png", price: 0.3,
     en: { name: "Fresh juice", desc: "Orange juice, served cold" },
     ar: { name: "عصير طازج", desc: "عصير برتقال بارد" } },
-  { section: "snacks", icon: "samosa", price: 0.2, badge: { en: "POPULAR", ar: "مطلوب" },
+  { section: "snacks", img: "samosa.png", price: 0.2,
     en: { name: "Samosa", desc: "Two crispy pieces" },
     ar: { name: "سمبوسة", desc: "حبتان مقرمشتان" } },
-  { section: "snacks", icon: "croissant", price: 0.4, badge: { en: "FRESH", ar: "طازج" },
+  { section: "snacks", img: "croissant.png", price: 0.4,
     en: { name: "Butter croissant", desc: "Freshly baked" },
     ar: { name: "كرواسون بالزبدة", desc: "مخبوز طازجاً" } },
-  { section: "snacks", icon: "chips", price: 0.15,
+  { section: "snacks", img: "chips.png", price: 0.15,
     en: { name: "Potato chips", desc: "Crunchy and lightly salted" },
     ar: { name: "رقائق البطاطس", desc: "مقرمشة ومملحة قليلاً" } },
-  { section: "snacks", icon: "cake", price: 0.6,
+  { section: "snacks", img: "cake.png", price: 0.6,
     en: { name: "Chocolate cake", desc: "A slice of chocolate cake" },
     ar: { name: "كيكة الشوكولاتة", desc: "قطعة كيك شوكولاتة" } }
 ];
 
-/* ---------- 2. Icons (simple line icons, drawn in SVG) ---------- */
+/* ---------- 2. Small icons (SVG) ---------- */
 const ICON_PATHS = {
   home: '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',
   menu: '<path d="M5 4h14v16H5z"/><path d="M9 9h6M9 13h6M9 17h3"/>',
   about: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7.5" r="0.6" fill="currentColor"/>',
   contact: '<path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/>',
   burger: '<path d="M4 7h16M4 12h16M4 17h16"/>',
-  close: '<path d="M6 6l12 12M18 6L6 18"/>',
-  cup: '<path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3c0 1.5 1 1.5 1 3M11.5 3c0 1.5 1 1.5 1 3"/>',
-  coffee: '<path d="M6 8h10l-1 11H7z"/><path d="M5 8h12"/><path d="M8 4h6l1 4H7z"/>',
-  bottle: '<path d="M10 3h4v3l2 3v12H8V9l2-3z"/><path d="M8 13h8"/>',
-  can: '<rect x="7" y="4" width="10" height="16" rx="2"/><path d="M7 8h10M7 16h10"/>',
-  juice: '<path d="M6 7h12l-1.5 14h-9z"/><path d="M14 7l2-4h3"/><path d="M7 12h10"/>',
-  samosa: '<path d="M12 4l9 15H3z"/><path d="M8 14h8"/>',
-  croissant: '<path d="M3 15c2-6 5-9 9-9s7 3 9 9c-2 1-4 0-5-1-1 2-3 3-4 3s-3-1-4-3c-1 1-3 2-5 1z"/><path d="M12 6v11"/>',
-  chips: '<path d="M6 3h12l-1 18H7z"/><path d="M9 8l2 3M13 9l2 3M9 14l2 2"/>',
-  cake: '<path d="M4 11h16v9H4z"/><path d="M4 15c2 1 4 1 6 0s4-1 6 0 3 1 4 0"/><path d="M12 7v4"/><path d="M12 4c.8.8.8 2 0 3-.8-1-.8-2.2 0-3z"/>',
-  pin: '<path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>',
-  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
-  arrow: '<path d="M9 5l7 7-7 7"/>',
-  mail: '<path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/>',
-  instagram: '<rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="16.5" cy="7.5" r="0.6" fill="currentColor"/>',
-  facebook: '<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/>',
-  whatsapp: '<path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9c0 3 3 6 6 6l1-1.5-2-1-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1-2z"/>',
-  bolt: '<path d="M13 3L5 14h6l-1 7 8-11h-6z"/>',
-  people: '<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><path d="M15 14.5c3 0 6 2 6 5.5"/>',
-  check: '<path d="M5 12.5l4.5 4.5L19 7"/>',
-  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7.5" r="0.6" fill="currentColor"/>'
+  close: '<path d="M6 6l12 12M18 6L6 18"/>'
 };
 
-function iconSvg(name) {
-  const paths = ICON_PATHS[name] || "";
-  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
-         'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
-         paths + "</svg>";
-}
-
-function drawIcons(root) {
-  root.querySelectorAll("[data-icon]").forEach(function (el) {
-    el.innerHTML = iconSvg(el.dataset.icon);
+function drawIcons() {
+  document.querySelectorAll("[data-icon]").forEach(function (el) {
+    el.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+      (ICON_PATHS[el.dataset.icon] || "") + "</svg>";
   });
 }
 
@@ -372,7 +357,7 @@ function applyLanguage() {
   document.querySelectorAll("[data-i18n]").forEach(function (el) {
     el.textContent = t(el.dataset.i18n);
   });
-  // Attributes, e.g. data-i18n-attr="aria-label:nav.open"
+  // Attributes, e.g. data-i18n-attr="aria-label:nav.open;placeholder:form.name.ph"
   document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
     el.dataset.i18nAttr.split(";").forEach(function (pair) {
       const parts = pair.split(":");
@@ -405,7 +390,7 @@ function setupLanguageButton() {
   });
 }
 
-/* ---------- 3. Open / closed strip (Oman time, UTC+4) ---------- */
+/* ---------- 3. Open / closed pill (Oman time, UTC+4) ---------- */
 function omanNow() {
   // Read the day and time in Muscat, whatever the visitor's clock is set to
   const parts = new Intl.DateTimeFormat("en-GB", {
@@ -439,11 +424,11 @@ function cafeStatus() {
 }
 
 function updateStatus() {
-  const strip = document.getElementById("status-strip");
-  if (!strip) return;
+  const pill = document.getElementById("status-pill");
+  if (!pill) return;
   const status = cafeStatus();
-  strip.classList.toggle("is-closed", !status.open);
-  strip.querySelector(".status-text").textContent = t(status.key);
+  pill.classList.toggle("is-closed", !status.open);
+  pill.querySelector(".status-text").textContent = t(status.key);
 }
 
 /* ---------- 4. Menu page ---------- */
@@ -458,20 +443,10 @@ function renderMenu() {
         const li = document.createElement("li");
         li.className = "card menu-item";
         li.innerHTML =
-          '<span class="product-icon">' + iconSvg(item.icon) + "</span>" +
-          "<div>" +
-            "<h3></h3>" +
-            "<p></p>" +
-          "</div>" +
+          '<img src="images/' + item.img + '" alt="" width="68" height="68" loading="lazy">' +
+          '<div class="text"><h3></h3><p></p></div>' +
           '<span class="price"></span>';
-        const h3 = li.querySelector("h3");
-        h3.textContent = text.name;
-        if (item.badge) {
-          const badge = document.createElement("span");
-          badge.className = "badge";
-          badge.textContent = item.badge[currentLang];
-          h3.appendChild(badge);
-        }
+        li.querySelector("h3").textContent = text.name;
         li.querySelector("p").textContent = text.desc;
         li.querySelector(".price").textContent = formatPrice(item.price);
         list.appendChild(li);
@@ -484,13 +459,14 @@ function setupTabs() {
   if (!tabs.length) return;
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
-      const target = tab.dataset.target;
       tabs.forEach(function (other) {
         other.setAttribute("aria-pressed", other === tab ? "true" : "false");
       });
-      document.querySelectorAll(".menu-section").forEach(function (sec) {
-        sec.hidden = target !== "all" && sec.id !== target;
-      });
+      const target = document.getElementById(tab.dataset.target);
+      if (target) {
+        target.scrollIntoView({ block: "start" });
+        target.querySelector(".eyebrow").focus({ preventScroll: true });
+      }
     });
   });
 }
@@ -579,7 +555,7 @@ function setupForm() {
     form.dataset.checked = "yes";
     if (!validateForm(form, true)) return;
 
-    // No server yet: remember the first name for the thank-you page, then go there
+    // No server yet: remember the first name for the confirmation page, then go there
     try {
       sessionStorage.setItem("gcet-name", form.elements["name"].value.trim().split(" ")[0]);
     } catch (err) {
@@ -597,24 +573,24 @@ function setupForm() {
 }
 
 function showThanksName() {
-  const heading = document.getElementById("thanks-title");
-  if (!heading) return;
+  const copy = document.getElementById("thanks-copy");
+  if (!copy) return;
   let name = "";
   try {
     name = sessionStorage.getItem("gcet-name") || "";
   } catch (e) {
     name = "";
   }
-  heading.textContent = name ? t("sent.title.name").replace("{name}", name) : t("sent.title");
+  copy.textContent = name ? t("sent.copy.name").replace("{name}", name) : t("sent.copy");
 }
 
 /* ---------- Start ---------- */
 document.addEventListener("DOMContentLoaded", function () {
-  drawIcons(document);
+  drawIcons();
   setupLanguageButton();
   setupNavMenu();
   setupTabs();
   setupForm();
   applyLanguage();
-  setInterval(updateStatus, 60 * 1000); // refresh the strip every minute
+  setInterval(updateStatus, 60 * 1000); // refresh the open / closed pill every minute
 });

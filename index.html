@@ -18,8 +18,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="" width="42" height="42">
-        <span data-i18n="brand">GCET Café</span>
+        <img src="images/logo.png" alt="" width="60" height="60">
+        <span class="brand-text">
+          <strong data-i18n="brand.name">GCET CAFÉ</strong>
+          <small data-i18n="brand.tag">CAMPUS CAFÉ</small>
+        </span>
       </a>
       <nav class="top-nav" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
         <ul>
@@ -34,10 +37,6 @@
         <span data-icon="burger" style="width:24px;height:24px;display:block"></span>
       </button>
     </div>
-    <p class="status-strip" id="status-strip" role="status">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="status-text">Open now · until 7:00 PM</span>
-    </p>
   </header>
 
   <!-- ===== Navigation menu (mobile) ===== -->
@@ -60,74 +59,79 @@
 
   <!-- ===== Main content ===== -->
   <main id="main" class="container">
-    <div class="home-grid">
+    <div class="home-top">
       <section class="hero">
-        <span class="badge" data-i18n="home.badge">ON CAMPUS</span>
-        <h1><span data-i18n="home.h1a">Welcome to</span> <span data-i18n="home.h1b">GCET Café.</span></h1>
-        <p class="subtitle" data-i18n="home.sub">Drinks and snacks for students and staff.</p>
-
-        <div class="feature-card">
-          <span class="eyebrow" data-i18n="home.feature.eyebrow">OUR FAVOURITE</span>
-          <h2><span data-i18n="home.feature.t1">Tea,</span> <span data-i18n="home.feature.t2">made fresh.</span></h2>
-          <p data-i18n="home.feature.copy">A hot cup for your break.</p>
-          <a class="btn btn-light" href="menu.html" data-i18n="home.feature.btn">VIEW MENU</a>
-          <span class="cup" data-icon="cup" style="color:var(--purple-700)" aria-hidden="true"></span>
+        <span class="pill" data-i18n="home.badge">ON CAMPUS</span>
+        <h1><span data-i18n="home.h1a">Welcome to</span> <span class="accent" data-i18n="home.h1b">GCET Café.</span></h1>
+        <p class="lead" data-i18n="home.sub">Drinks and snacks for students and staff.</p>
+        <p class="pill status-pill" id="status-pill" role="status">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="status-text">Open now · until 7:00 PM</span>
+        </p>
+        <div class="hero-buttons">
+          <a class="btn" href="menu.html"><span data-i18n="home.viewMenu">VIEW MENU</span><span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-outline" href="contact.html" data-i18n="home.findUs">FIND US</a>
         </div>
       </section>
 
-      <div>
-        <section class="section" aria-labelledby="fav-title">
-          <div class="section-head">
-            <h2 id="fav-title" data-i18n="home.fav.title">Our favourites</h2>
-            <a href="menu.html" data-i18n="home.fav.link">MENU →</a>
-          </div>
-          <div class="fav-grid">
-            <article class="card product-card">
-              <span class="product-icon" data-icon="cup"></span>
-              <h3 data-i18n="home.fav.tea">Tea</h3>
-              <p class="details" data-i18n="home.fav.tea.d">Hot spiced tea</p>
-              <span class="price" data-price="0.1">0.100 OMR</span>
-            </article>
-            <article class="card product-card">
-              <span class="product-icon" data-icon="bottle"></span>
-              <h3 data-i18n="home.fav.water">Water</h3>
-              <p class="details" data-i18n="home.fav.water.d">Bottled &amp; chilled</p>
-              <span class="price" data-price="0.1">0.100 OMR</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="note-banner">
-            <span class="product-icon" data-icon="info" style="background:var(--white);color:var(--olive-700);margin:0;flex-shrink:0"></span>
-            <div>
-              <h3 data-i18n="home.note.title">Need a snack?</h3>
-              <p data-i18n="home.note.copy">Ask at the counter about what’s available today.</p>
-            </div>
-          </div>
-        </section>
-      </div>
+      <section class="feature-card" aria-labelledby="feature-title">
+        <div>
+          <span class="eyebrow" data-i18n="home.feature.eyebrow">OUR FAVOURITE</span>
+          <h2 id="feature-title"><span data-i18n="home.feature.t1">Tea,</span> <span data-i18n="home.feature.t2">made fresh.</span></h2>
+          <p data-i18n="home.feature.copy">A hot cup for your break.</p>
+          <a class="btn btn-olive" href="menu.html"><span data-i18n="home.viewMenu">VIEW MENU</span><span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="feature-photo">
+          <img src="images/tea.png" alt="A glass of hot spiced tea on a saucer" data-i18n-attr="alt:alt.tea" width="200" height="200">
+        </div>
+      </section>
     </div>
 
-    <section class="section" aria-labelledby="visit-title">
-      <h2 id="visit-title" data-i18n="home.visit">Visit us</h2>
-      <div class="info-list">
-        <a class="card info-card" href="contact.html">
-          <span class="product-icon" data-icon="pin"></span>
-          <div>
-            <h3 data-i18n="home.find">Find us</h3>
-            <p data-i18n="home.find.d">GCET Canteen · Campus</p>
-          </div>
-          <span class="arrow" data-icon="arrow" style="width:20px;height:20px;display:block"></span>
+    <section class="favourites" aria-labelledby="fav-title">
+      <div class="section-row">
+        <h2 class="section-title" id="fav-title" data-i18n="home.fav.title">Our favourites</h2>
+        <a class="btn btn-soft" href="menu.html"><span data-i18n="home.fav.link">MENU</span><span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="fav-grid">
+        <a class="card fav-card" href="menu.html#hot">
+          <img src="images/tea.png" alt="" width="72" height="72">
+          <h3 data-i18n="fav.tea">Tea</h3>
+          <span class="desc" data-i18n="fav.tea.d">Hot spiced tea</span>
+          <span class="price" data-price="0.1">0.100 OMR</span>
         </a>
-        <a class="card info-card" href="contact.html">
-          <span class="product-icon" data-icon="clock"></span>
-          <div>
-            <h3 data-i18n="home.hours">Opening hours</h3>
-            <p data-i18n="home.hours.d">Sun – Thu · 7:30 AM – 7:00 PM / Fri &amp; Sat: closed</p>
-          </div>
-          <span class="arrow" data-icon="arrow" style="width:20px;height:20px;display:block"></span>
+        <a class="card fav-card" href="menu.html#hot">
+          <img src="images/coffee.png" alt="" width="72" height="72">
+          <h3 data-i18n="fav.coffee">Coffee</h3>
+          <span class="desc" data-i18n="fav.coffee.d">Served with dates</span>
+          <span class="price" data-price="0.2">0.200 OMR</span>
         </a>
+        <a class="card fav-card" href="menu.html#cold">
+          <img src="images/water.png" alt="" width="72" height="72">
+          <h3 data-i18n="fav.water">Water</h3>
+          <span class="desc" data-i18n="fav.water.d">Bottled &amp; chilled</span>
+          <span class="price" data-price="0.1">0.100 OMR</span>
+        </a>
+        <a class="card fav-card" href="menu.html#snacks">
+          <img src="images/samosa.png" alt="" width="72" height="72">
+          <h3 data-i18n="fav.samosa">Samosa</h3>
+          <span class="desc" data-i18n="fav.samosa.d">Two crispy pieces</span>
+          <span class="price" data-price="0.2">0.200 OMR</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="visit" aria-labelledby="visit-title">
+      <h2 class="eyebrow" id="visit-title" data-i18n="home.visit">VISIT US</h2>
+      <div class="visit-grid">
+        <a class="card info-card" href="contact.html">
+          <h3 data-i18n="info.find">Find us</h3>
+          <p data-i18n="info.find.d">GCET Canteen · Campus</p>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+        <div class="card info-card">
+          <h3 data-i18n="info.hours">Opening hours</h3>
+          <p><span data-i18n="info.hours.d1">Sun – Thu · 7:30 AM – 7:00 PM</span><br><span data-i18n="info.hours.d2">Fri &amp; Sat: closed</span></p>
+        </div>        <img class="photo visit-photo" src="images/cafe-counter.png" alt="A staff member working at the café counter" data-i18n-attr="alt:alt.counter" width="416" height="120">
       </div>
     </section>
   </main>
@@ -135,19 +139,8 @@
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <div class="footer-brand"><img src="images/logo.png" alt="" width="36" height="36"><span data-i18n="brand">GCET Café</span></div>
-        <p data-i18n="footer.place">GCET Canteen · Global College of Engineering and Technology, Muscat</p>
-      </div>
-      <div>
-        <ul>
-          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
-          <li><a href="about.html" data-i18n="nav.about">About</a></li>
-          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-        </ul>
-        <p data-i18n="footer.copy">© 2026 GCET Café · Student project</p>
-      </div>
+      <p data-i18n="footer.info">GCET Café · Campus · Sun – Thu 7:30 AM – 7:00 PM</p>
+      <p class="footer-copy" data-i18n="footer.copy">© GCET Café 2026</p>
     </div>
   </footer>
 

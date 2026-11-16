@@ -18,8 +18,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="" width="42" height="42">
-        <span data-i18n="brand">GCET Café</span>
+        <img src="images/logo.png" alt="" width="60" height="60">
+        <span class="brand-text">
+          <strong data-i18n="brand.name">GCET CAFÉ</strong>
+          <small data-i18n="brand.tag">CAMPUS CAFÉ</small>
+        </span>
       </a>
       <nav class="top-nav" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
         <ul>
@@ -34,10 +37,6 @@
         <span data-icon="burger" style="width:24px;height:24px;display:block"></span>
       </button>
     </div>
-    <p class="status-strip" id="status-strip" role="status">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="status-text">Open now · until 7:00 PM</span>
-    </p>
   </header>
 
   <!-- ===== Navigation menu (mobile) ===== -->
@@ -60,65 +59,49 @@
 
   <!-- ===== Main content ===== -->
   <main id="main" class="container">
-    <span class="eyebrow" data-i18n="about.eyebrow">ABOUT US</span>
-    <h1 data-i18n="about.title">A café for students and staff.</h1>
+    <div class="about-top">
+      <div>
+        <span class="eyebrow" data-i18n="about.eyebrow">ABOUT US</span>
+        <h1 class="page-title"><span data-i18n="about.t1">A café for students</span> <span data-i18n="about.t2">and staff.</span></h1>
+        <p class="lead" data-i18n="about.text">GCET Café is a small café on campus where students and staff can take a short break between classes.</p>
+      </div>
+      <img class="photo about-photo" src="images/cafe-seating.png" alt="Tables and chairs in the café seating area" data-i18n-attr="alt:alt.seating" width="660" height="330">
+    </div>
 
-    <figure class="quote-card">
-      <blockquote data-i18n="about.quote">A place to take a short break.</blockquote>
-      <figcaption><cite data-i18n="about.attr">GCET CAFÉ • CAMPUS LIFE</cite></figcaption>
-    </figure>
+    <ul class="features">
+      <li class="card feature">
+        <span class="dot" aria-hidden="true"></span>
+        <h3 data-i18n="about.hl1">Drinks and snacks</h3>
+        <p data-i18n="about.hl1.d">Tea, coffee, water, juice and snacks.</p>
+      </li>
+      <li class="card feature">
+        <span class="dot olive" aria-hidden="true"></span>
+        <h3 data-i18n="about.hl2">Quick service</h3>
+        <p data-i18n="about.hl2.d">Easy to grab between classes.</p>
+      </li>
+      <li class="card feature">
+        <span class="dot" aria-hidden="true"></span>
+        <h3 data-i18n="about.hl3">Open to everyone</h3>
+        <p data-i18n="about.hl3.d">For all GCET students and staff.</p>
+      </li>
+    </ul>
 
-    <section class="section" aria-labelledby="about-h2">
-      <h2 id="about-h2" data-i18n="about.h2">About the café</h2>
-      <p data-i18n="about.text">GCET Café is a small café on campus where students and staff can get a drink or a snack between classes.</p>
+    <div class="about-photos">
+      <img class="photo" src="images/ordering.png" alt="Students buying bottled water at the counter" data-i18n-attr="alt:alt.ordering" width="630" height="220" loading="lazy">
+      <img class="photo" src="images/preparing.png" alt="A staff member handing over bottled water" data-i18n-attr="alt:alt.preparing" width="630" height="220" loading="lazy">
+    </div>
 
-      <ul class="highlights">
-        <li class="card">
-          <span class="product-icon" data-icon="cup"></span>
-          <div>
-            <h3 data-i18n="about.hl1">Drinks and snacks</h3>
-            <p data-i18n="about.hl1.d">Tea, coffee, water, juice and snacks.</p>
-          </div>
-        </li>
-        <li class="card">
-          <span class="product-icon" data-icon="bolt"></span>
-          <div>
-            <h3 data-i18n="about.hl2">Quick service</h3>
-            <p data-i18n="about.hl2.d">Easy to grab between classes.</p>
-          </div>
-        </li>
-        <li class="card">
-          <span class="product-icon" data-icon="people"></span>
-          <div>
-            <h3 data-i18n="about.hl3">Open to everyone</h3>
-            <p data-i18n="about.hl3.d">For all GCET students and staff.</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <section class="closing">
+    <div class="about-end">
       <p data-i18n="about.closing">Come and visit us on campus.</p>
-      <a class="btn" href="menu.html" data-i18n="about.cta">VIEW OUR MENU</a>
-    </section>
+      <a class="btn" href="menu.html"><span data-i18n="about.cta">VIEW OUR MENU</span><span class="arrow" aria-hidden="true">→</span></a>
+    </div>
   </main>
 
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <div class="footer-brand"><img src="images/logo.png" alt="" width="36" height="36"><span data-i18n="brand">GCET Café</span></div>
-        <p data-i18n="footer.place">GCET Canteen · Global College of Engineering and Technology, Muscat</p>
-      </div>
-      <div>
-        <ul>
-          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
-          <li><a href="about.html" data-i18n="nav.about">About</a></li>
-          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-        </ul>
-        <p data-i18n="footer.copy">© 2026 GCET Café · Student project</p>
-      </div>
+      <p data-i18n="footer.info">GCET Café · Campus · Sun – Thu 7:30 AM – 7:00 PM</p>
+      <p class="footer-copy" data-i18n="footer.copy">© GCET Café 2026</p>
     </div>
   </footer>
 

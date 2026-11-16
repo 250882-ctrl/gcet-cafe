@@ -18,8 +18,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="" width="42" height="42">
-        <span data-i18n="brand">GCET Café</span>
+        <img src="images/logo.png" alt="" width="60" height="60">
+        <span class="brand-text">
+          <strong data-i18n="brand.name">GCET CAFÉ</strong>
+          <small data-i18n="brand.tag">CAMPUS CAFÉ</small>
+        </span>
       </a>
       <nav class="top-nav" data-i18n-attr="aria-label:nav.main" aria-label="Main navigation">
         <ul>
@@ -34,10 +37,6 @@
         <span data-icon="burger" style="width:24px;height:24px;display:block"></span>
       </button>
     </div>
-    <p class="status-strip" id="status-strip" role="status">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="status-text">Open now · until 7:00 PM</span>
-    </p>
   </header>
 
   <!-- ===== Navigation menu (mobile) ===== -->
@@ -61,61 +60,46 @@
   <!-- ===== Main content ===== -->
   <main id="main" class="container">
     <span class="eyebrow" data-i18n="menu.eyebrow">GCET CAFÉ MENU</span>
-    <h1 data-i18n="menu.title">Our menu</h1>
-    <p class="subtitle" data-i18n="menu.sub">Drinks and snacks at simple prices.</p>
+    <h1 class="page-title" data-i18n="menu.title">Our menu</h1>
+    <p class="lead" data-i18n="menu.sub">Drinks and snacks at simple prices.</p>
 
-    <div class="tabs" role="group" data-i18n-attr="aria-label:menu.tabs" aria-label="Menu sections">
-      <button class="tab" type="button" data-target="all" aria-pressed="true" data-i18n="menu.tab.all">All</button>
-      <button class="tab" type="button" data-target="hot" aria-pressed="false" data-i18n="menu.tab.hot">Hot</button>
-      <button class="tab" type="button" data-target="cold" aria-pressed="false" data-i18n="menu.tab.cold">Cold</button>
-      <button class="tab" type="button" data-target="snacks" aria-pressed="false" data-i18n="menu.tab.snacks">Snacks</button>
-    </div>
-
-    <section class="offer-card" aria-labelledby="offer-title">
-      <span class="product-icon" data-icon="samosa" style="background:var(--white);margin:0;flex-shrink:0"></span>
-      <div>
-        <span class="eyebrow" data-i18n="menu.offer.label">TODAY’S OFFER</span>
-        <h2 id="offer-title" data-i18n="menu.offer.title">Tea + Samosa</h2>
-        <p data-i18n="menu.offer.copy">A hot tea and two crispy samosas.</p>
+    <div class="menu-bar">
+      <div class="tabs" role="group" data-i18n-attr="aria-label:menu.tabs" aria-label="Jump to a menu section">
+        <button class="tab" type="button" data-target="hot" aria-pressed="true" data-i18n="menu.tab.hot">Hot</button>
+        <button class="tab" type="button" data-target="cold" aria-pressed="false" data-i18n="menu.tab.cold">Cold</button>
+        <button class="tab" type="button" data-target="snacks" aria-pressed="false" data-i18n="menu.tab.snacks">Snacks</button>
       </div>
-      <span class="price" data-i18n="menu.offer.price">0.250 OMR</span>
-    </section>
+      <section class="offer-card" aria-labelledby="offer-label">
+        <div>
+          <h2 class="eyebrow" id="offer-label" data-i18n="menu.offer.label">TODAY’S OFFER</h2>
+          <p class="offer-text" data-i18n="menu.offer.text">Tea + Samosa — a hot tea and two crispy samosas</p>
+        </div>
+        <span class="offer-price" data-price="0.25">0.250 OMR</span>
+      </section>
+    </div>
 
     <!-- Menu items are added by js/main.js from the MENU_ITEMS list -->
     <div class="menu-columns">
-      <section class="section menu-section" id="hot" aria-labelledby="hot-title">
-        <h2 id="hot-title" data-i18n="menu.sec.hot">Hot drinks</h2>
+      <section class="menu-section" id="hot" aria-labelledby="hot-title">
+        <h2 class="eyebrow" id="hot-title" tabindex="-1" data-i18n="menu.sec.hot">HOT DRINKS</h2>
         <ul class="menu-list" id="list-hot"></ul>
       </section>
-      <section class="section menu-section" id="cold" aria-labelledby="cold-title">
-        <h2 id="cold-title" data-i18n="menu.sec.cold">Cold drinks</h2>
+      <section class="menu-section" id="cold" aria-labelledby="cold-title">
+        <h2 class="eyebrow" id="cold-title" tabindex="-1" data-i18n="menu.sec.cold">COLD DRINKS</h2>
         <ul class="menu-list" id="list-cold"></ul>
       </section>
-      <section class="section menu-section" id="snacks" aria-labelledby="snacks-title">
-        <h2 id="snacks-title" data-i18n="menu.sec.snacks">Snacks</h2>
+      <section class="menu-section" id="snacks" aria-labelledby="snacks-title">
+        <h2 class="eyebrow" id="snacks-title" tabindex="-1" data-i18n="menu.sec.snacks">SNACKS</h2>
         <ul class="menu-list" id="list-snacks"></ul>
       </section>
     </div>
-
-    <p class="small-note" data-i18n="menu.note">Prices may change. Ask at the counter for today’s items.</p>
   </main>
 
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <div class="footer-brand"><img src="images/logo.png" alt="" width="36" height="36"><span data-i18n="brand">GCET Café</span></div>
-        <p data-i18n="footer.place">GCET Canteen · Global College of Engineering and Technology, Muscat</p>
-      </div>
-      <div>
-        <ul>
-          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
-          <li><a href="about.html" data-i18n="nav.about">About</a></li>
-          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-        </ul>
-        <p data-i18n="footer.copy">© 2026 GCET Café · Student project</p>
-      </div>
+      <p data-i18n="footer.info">GCET Café · Campus · Sun – Thu 7:30 AM – 7:00 PM</p>
+      <p class="footer-copy" data-i18n="footer.copy">© GCET Café 2026</p>
     </div>
   </footer>
 
